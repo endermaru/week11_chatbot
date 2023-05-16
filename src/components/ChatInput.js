@@ -1,4 +1,4 @@
-import {IconArrowUp} from "@tabler/icons-react";
+import {IconSend} from "@tabler/icons-react";
 import {useEffect, useRef, useState} from "react";
 
 export const ChatInput = ({onSendMessage}) => {
@@ -40,9 +40,9 @@ export const ChatInput = ({onSendMessage}) => {
         <div className="relative">
             <textarea
                 ref={textareaRef}
-                className="min-h-[44px] rounded-lg pl-4 pr-12 py-2
-                            w-full focus:outline-none focus:ring-1
-                            focus:ring-neutral-300 border-2 border-neutral-200"
+                className="min-h-[44px] bg-stone-700 rounded-lg pl-4 pr-12 py-2
+                            w-full focus:outline-none text-white
+                            focus:ring-1 focus:ring-yellow-400 hover:ring-1 hover:ring-yellow-400"
                 style={{resize:"none"}}
                 placeholder="메시지를 입력하세요"
                 value={content}
@@ -51,9 +51,9 @@ export const ChatInput = ({onSendMessage}) => {
                 onKeyDown={handleKeyDown} //누르는 키마다 엔터 함수 호출
             />
             <button onClick={()=>handleSend()}>
-                <IconArrowUp className="absolute right-2 bottom-3 h-8 w-8
+                <IconSend className="absolute right-2 bottom-3 h-8 w-8
                                         hover:cursor-pointer rounded-full p-1
-                                        bg-blue-500 text-white hover:opacity-80"/>
+                                        bg-stone-700 text-white hover:bg-stone-800 hover:text-yellow-400"/>
             </button>
         </div>
     );
